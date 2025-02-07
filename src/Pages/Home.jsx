@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useCallback, memo } from "react"
-import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useState, useEffect, useCallback, memo } from "react";
+import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import seImage from "../components/photoesa/se.webp";
 
 // Memoized Components
 const StatusBadge = memo(() => (
   <div className="inline-block animate-float lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
     <div className="relative group">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#87ebf3] to-[#f53ed9]rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
       <div className="relative px-3 sm:px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
-        <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
+        <span className="bg-gradient-to-r from-[#87ebf3] to-[#f53ed9] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
           <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
           Ready to Innovate
         </span>
@@ -25,14 +26,14 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Frontend
+         SOFTWARE
         </span>
       </span>
       <br />
       <span className="relative inline-block mt-2">
-        <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
-        <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-          Developer
+        <span className="absolute -inset-2 bg-gradient-to-r from-[#87ebf3] to-[#f53ed9] blur-2xl opacity-20"></span>
+        <span className="relative bg-gradient-to-r from-[#87ebf3] to-[#f53ed9] bg-clip-text text-transparent">
+          ENGINEER
         </span>
       </span>
     </h1>
@@ -65,7 +66,7 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
 const SocialLink = memo(({ icon: Icon, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer">
     <button className="group relative p-3">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#87ebf3] to-[#f53ed9] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
       <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
         <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
       </div>
@@ -75,14 +76,15 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 
 // Constants
 const TYPING_SPEED = 100;
-const ERASING_SPEED = 50;
+const ERASING_SPEED = 150;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const WORDS = ["MERN Stack Developer", "Tech Enthusiast", "Full Stack Developer", "Web Developer"];
+const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "Java","C++","C#.Net","C","Html","CSS","Git","Bootstrap","Figma","Adobe Xd","Php","Mysql"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/EkiZR" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ekizr/" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id" }
+  { icon: Github, link: "https://github.com/VEENUSATHEESAN" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/veenu-satheesan/" },
+  { icon: Mail, link: "mailto:veenusatheesan@gmail.com" }, // Replace with your actual email
+  { icon: ExternalLink, link: "https://medium.com/@veenusatheesan" }, // Replace with your Medium profile
 ];
 
 const Home = () => {
@@ -176,14 +178,14 @@ const Home = () => {
                   <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
                     {text}
                   </span>
-                  <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink"></span>
+                  <span className="w-[3px] h-6 bg-gradient-to-t from-[#87ebf3] to-[#f53ed9] ml-1 animate-blink"></span>
                 </div>
 
                 {/* Description */}
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                 Crafting efficient, scalable, and innovative digital solutions for the modern web.
                 </p>
 
                 {/* Tech Stack */}
@@ -208,33 +210,16 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Column - Optimized Lottie Animation */}
-            <div className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-              data-aos="fade-left"
-              data-aos-delay="600">
-              <div className="relative w-full opacity-90">
-                <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
-                  isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
-                }`}>
-                </div>
-
-                <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${
-                  isHovering ? "scale-105" : "scale-100"
-                }`}>
-                  <DotLottieReact {...lottieOptions} />
-                </div>
-
-                <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
-                  isHovering ? "opacity-50" : "opacity-20"
-                }`}>
-                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
-                    isHovering ? "scale-110" : "scale-100"
-                  }`}>
-                  </div>
-                </div>
-              </div>
+            {/* Right Column - Full Image */}
+            <div
+                className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[600px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
+                data-aos="fade-left"
+                data-aos-delay="400">
+              <img
+                src={seImage} // Correctly imported image
+                alt="Software Engineer"
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
