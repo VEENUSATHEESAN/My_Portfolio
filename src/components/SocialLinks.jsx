@@ -76,10 +76,10 @@ const SocialLinks = () => {
                 style={{ backgroundColor: linkedIn.color }}
               />
               <div className="relative p-2 rounded-md">
-                <linkedIn.icon
-                  className="w-6 h-6 transition-all duration-500 group-hover:scale-105"
-                  style={{ color: linkedIn.color }}
-                />
+                {React.createElement(linkedIn.icon, {
+                  className: "w-6 h-6 transition-all duration-500 group-hover:scale-105",
+                  style: { color: linkedIn.color },
+                })}
               </div>
             </div>
             <div className="flex flex-col">
@@ -129,10 +129,10 @@ const SocialLinks = () => {
                   style={{ backgroundColor: link.color }}
                 />
                 <div className="relative p-2 rounded-lg">
-                  <link.icon
-                    className="w-5 h-5 transition-all duration-500 group-hover:scale-110"
-                    style={{ color: link.color }}
-                  />
+                  {React.createElement(link.icon, {
+                    className: "w-5 h-5 transition-all duration-500 group-hover:scale-110",
+                    style: { color: link.color },
+                  })}
                 </div>
               </div>
               <div className="flex flex-col min-w-0">
@@ -145,8 +145,8 @@ const SocialLinks = () => {
               </div>
               <ExternalLink
                 className="w-4 h-4 text-gray-500 group-hover:text-white ml-auto
-                                     opacity-0 group-hover:opacity-100 transition-all duration-300
-                                     transform group-hover:translate-x-0 -translate-x-2"
+                           opacity-0 group-hover:opacity-100 transition-all duration-300
+                           transform group-hover:translate-x-0 -translate-x-2"
               />
 
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">

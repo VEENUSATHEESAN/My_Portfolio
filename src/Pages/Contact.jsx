@@ -1,13 +1,14 @@
-// pages/contact.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import SocialLinks from "../components/SocialLinks";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import { Share2 } from "lucide-react"; // Uncomment if using
 
 const ConnectWithMe = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init({
-      once: false,
+      duration: 1200, // Set animation duration
+      once: true, // Ensures animations run only once
     });
   }, []);
 
@@ -19,7 +20,6 @@ const ConnectWithMe = () => {
       <div className="container px-[1%] grid grid-cols-1">
         <div
           data-aos="fade-right"
-          data-aos-duration="1200"
           className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
         >
           <div className="flex justify-between items-start mb-8">
@@ -31,7 +31,7 @@ const ConnectWithMe = () => {
                 Have something to discuss? Let's connect and chat.
               </p>
             </div>
-            {/* Uncomment the Share2 icon if needed */}
+            {/* Uncomment if you want to use the Share icon */}
             {/* <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" /> */}
           </div>
 

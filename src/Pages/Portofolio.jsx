@@ -16,8 +16,7 @@ import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
 
-
-// Separate ShowMore/ShowLess button component
+// Toggle Button Component
 const ToggleButton = ({ onClick, isShowingMore }) => (
   <button
     onClick={onClick}
@@ -70,6 +69,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
   </button>
 );
 
+// Tab Panel Component
 function TabPanel({ children, value, index, ...other }) {
   return (
     <div
@@ -117,11 +117,10 @@ const techStacks = [
   { icon: "php.svg", language: "PHP" },
   { icon: "mysql.svg", language: "MySQL" },
   { icon: "git.svg", language: "Git" },
-  {icon: "adobexd.svg", language: "Adobe XD"},
-  {icon: "figma.svg", language: "Figma"},
-  {icon: "python.svg", language: "Python"},
+  { icon: "adobexd.svg", language: "Adobe XD" },
+  { icon: "figma.svg", language: "Figma" },
+  { icon: "python.svg", language: "Python" },
 ];
-
 
 export default function FullWidthTabs() {
   const theme = useTheme();
@@ -134,10 +133,7 @@ export default function FullWidthTabs() {
   const initialItems = isMobile ? 4 : 6;
 
   useEffect(() => {
-    // Initialize AOS once
-    AOS.init({
-      once: false, // This will make animations occur only once
-    });
+    AOS.init({ once: false });
   }, []);
 
   const fetchData = useCallback(async () => {
@@ -160,8 +156,6 @@ export default function FullWidthTabs() {
 
       setProjects(projectData);
       setCertificates(certificateData);
-
-      // Store in localStorage
       localStorage.setItem("projects", JSON.stringify(projectData));
       localStorage.setItem("certificates", JSON.stringify(certificateData));
     } catch (error) {
@@ -178,10 +172,10 @@ export default function FullWidthTabs() {
   };
 
   const toggleShowMore = useCallback((type) => {
-    if (type === 'projects') {
-      setShowAllProjects(prev => !prev);
+    if (type === "projects") {
+      setShowAllProjects((prev) => !prev);
     } else {
-      setShowAllCertificates(prev => !prev);
+      setShowAllCertificates((prev) => !prev);
     }
   }, []);
 
@@ -190,7 +184,6 @@ export default function FullWidthTabs() {
 
   return (
     <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
-      {/* Header section - unchanged */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#97eddd] to-[#e4f755]">
           <span style={{
@@ -204,13 +197,11 @@ export default function FullWidthTabs() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical expertise. 
-          Each section represents a milestone in my continuous learning path.
+          Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.
         </p>
       </div>
 
       <Box sx={{ width: "100%" }}>
-        {/* AppBar and Tabs section - unchanged */}
         <AppBar
           position="static"
           elevation={0}
