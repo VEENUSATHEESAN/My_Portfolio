@@ -5,7 +5,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
-      console.log("ProjectLink kosong");
+      console.log("ProjectLink is empty");
       e.preventDefault();
       alert("Live demo link is not available");
     }
@@ -13,7 +13,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
 
   const handleDetails = (e) => {
     if (!id) {
-      console.log("ID kosong");
+      console.log("ID is empty");
       e.preventDefault();
       alert("Project details are not available");
     }
@@ -41,9 +41,9 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
           </h3>
 
           {/* Project Description */}
-          <p className="text-gray-300/80 text-sm leading-relaxed line-clamp-2">
+          <div className="text-gray-300/80 text-sm leading-relaxed">
             {Description}
-          </p>
+          </div>
 
           {/* Actions Section */}
           <div className="pt-4 flex items-center justify-between">
