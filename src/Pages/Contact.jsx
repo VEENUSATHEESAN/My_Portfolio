@@ -15,7 +15,7 @@ const ConnectWithMe = () => {
   return (
     <div
       className="h-auto py-10 flex items-center justify-center px-[5%] md:px-0"
-      id="ConnectWithMe"
+      id="Contact"
     >
       <div className="container px-[1%] grid grid-cols-1">
         <div
